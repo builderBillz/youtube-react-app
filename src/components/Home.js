@@ -14,7 +14,7 @@ class Home extends React.component {
     }
     render(){
         return (
-            <section>
+            <section className="home-screen">
                 <Searchbar />
                 <Video />
                 <VideoThumbNail />
