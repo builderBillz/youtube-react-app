@@ -5,4 +5,22 @@ import VideoThumbNail from "./VideoThumbNail";
 import "./Home.css";
 
 
-export default Home;
+class Home extends React.component {
+    constructor() {
+        super();
+        this.state = {
+            display: [],
+        }
+    }
+    render(){
+        return (
+            <section>
+                <Searchbar />
+                <Video />
+                <VideoThumbNail />
+            </section>
+        )
+    }
+}
+
+export default Home; 
