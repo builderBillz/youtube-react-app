@@ -1,5 +1,5 @@
 import React from "react";
-import Searchbar from "./Searchbar";
+import SearchBar from "./SearchBar";
 import Video from "./Video";
 import VideoThumbNail from "./VideoThumbNail";
 import "./Home.css";
@@ -9,13 +9,13 @@ class Home extends React.component {
     constructor() {
         super();
         this.state = {
-            display: [],
+            display: null,
         }
     }
     render(){
         return (
             <section>
-                <Searchbar />
+                <SearchBar />
                 <Video />
                 <VideoThumbNail />
             </section>
