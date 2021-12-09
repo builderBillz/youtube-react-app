@@ -1,0 +1,10 @@
+.NavBar{
+  background-color: red;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+}
+h1{
+  font-size:20px;
+  color: white;
+}

@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
-   <div>
+   <>
+   <div className='NavBar'>
         <h1>
           Youtube
         </h1>
@@ -16,6 +17,7 @@ export const Navbar = () => {
           </li>
         </ul>
     </div>
+    </>
   );
 };
 
