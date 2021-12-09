@@ -1,22 +1,22 @@
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 
-export const Navbar = () => {
+export const NavBar = () => {
   return (
    <div>
         <h1>
           Youtube
         </h1>
         <ul>
-          <li>
+          {/* <li>
             <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/about">About</Link>
-          </li>
+          </li> */}
         </ul>
     </div>
   );
 };
 
-export default Navbar;
+export default NavBar;

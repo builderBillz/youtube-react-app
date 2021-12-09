@@ -5,7 +5,7 @@ import VideoThumbNail from "./VideoThumbNail";
 import "./Home.css";
 
 
-class Home extends React.component {
+class Home extends React.Component {
     constructor() {
         super();
         this.state = {
