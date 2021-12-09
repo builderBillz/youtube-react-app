@@ -9,15 +9,15 @@ class Home extends React.Component {
     constructor() {
         super();
         this.state = {
-            display: [],
+            value: "",
         }
     }
     render(){
         return (
             <section>
-                <SearchBar />
+                {/* <SearchBar />
                 <Video />
-                <VideoThumbNail />
+                <VideoThumbNail /> */}
             </section>
         )
     }
