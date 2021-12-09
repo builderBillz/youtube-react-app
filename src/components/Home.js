@@ -1,11 +1,11 @@
 import React from "react";
-import Searchbar from "./Searchbar";
+import SearchBar from "./SearchBar";
 import Video from "./Video";
 import VideoThumbNail from "./VideoThumbNail";
 import "./Home.css";
 
 
-class Home extends React.component {
+class Home extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -14,8 +14,8 @@ class Home extends React.component {
     }
     render(){
         return (
-            <section className="home-screen">
-                <Searchbar />
+            <section>
+                <SearchBar />
                 <Video />
                 <VideoThumbNail />
             </section>
@@ -23,4 +23,4 @@ class Home extends React.component {
     }
 }
 
-export default Home;
+export default Home; 
