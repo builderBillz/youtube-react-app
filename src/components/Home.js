@@ -9,7 +9,7 @@ class Home extends React.component {
     constructor() {
         super();
         this.state = {
-            display: null,
+            value: "",
         }
     }
     render(){
