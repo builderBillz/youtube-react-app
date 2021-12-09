@@ -7,7 +7,7 @@ class About extends Component {
             <>
                 <p>IMAGE</p>
                 <p>Name</p>
-                <a href="https://www.github.com/angie3j">Angie Guerrero</a>
+                {/* <a href="https://www.github.com/angie3j">Angie Guerrero</a> */}
             </>
         );
     }

@@ -1,14 +1,20 @@
 import React from "react";
 import './App.css';
 import Home from './components/Home';
-import Navbar from './components/NavBar';
+import NavBar from './components/NavBar';
+import About from "./components/About";
+import { Route, Router, Routes } from "react-router";
 
-function App() {
+const App = () => {
   return (
 
-    <div className="App">
-      <Home/>     
-    </div>
+    <div className="wrapper">
+        <NavBar/>
+        <Routes>
+          <Route exact path="/" element={<Home/>}/>
+          <Route path="/About" element={<About/>}/>
+        </Routes>
+      </div>
   );
 }
 export default App;
