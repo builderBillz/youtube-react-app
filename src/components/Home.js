@@ -15,9 +15,9 @@ class Home extends React.Component {
     render(){
         return (
             <section>
-                <SearchBar />
+                {/* <SearchBar />
                 <Video />
-                <VideoThumbNail />
+                <VideoThumbNail /> */}
             </section>
         )
     }
