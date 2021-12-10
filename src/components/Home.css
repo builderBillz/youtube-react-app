@@ -1,7 +1,10 @@
-.home-screen {
-    display: block;
-    height: 70vh;
-    width: 100%;
-    object-fit: cover;
-    object-position: 50% 60%;
+.home {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 1fr, 1fr, 1fr; */
+    /* background-color: yellow; */
 }
+
+/* .videoDisplay {
+    grid-row: 3;
+} */

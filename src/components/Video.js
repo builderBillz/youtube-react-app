@@ -1,7 +1,7 @@
 import "./Video.css";
 const Video = () => {
     return (
-        <div>
+        <div className="videoDisplay">
             <p>No search results yet!</p>
         </div>
     )

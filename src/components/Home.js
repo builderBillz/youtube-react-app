@@ -12,15 +12,20 @@ class Home extends React.Component {
             value: "",
         }
     }
+
+    
+
     render(){
         return (
-            <section>
-                {/* <SearchBar />
-                <Video />
-                <VideoThumbNail /> */}
+            <section className="home">
+                <SearchBar />
+                <Video className="videoDisplay" />
+                <VideoThumbNail />
             </section>
         )
     }
 }
 
 export default Home; 
+
+// AIzaSyCUGo0lHGnp0HZtbMZ2kUynD6ytG-I2HSQ

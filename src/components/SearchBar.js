@@ -5,31 +5,58 @@ class SearchBar extends React.Component  {
     constructor() {
         super();
         this.state = {
-            value: '',
+            userInput: "",
+            result: [],
         }
     }
+
+    handleSearch = () => {
+        fetch(
+            `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${this.state.userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`)
+        .then((response) => response.json())
+        .then((json) => {
+
+            console.log(json)
+            this.setState({
+                result: json,
+            })
+        })
+            .catch((err) => {
+                console.log('error fetching data')
+            })
+    }
+
+    componentDidMount = () => {
+        this.handleSearch();
+
+    };
+    
+    
 
     handleSubmit = (event) => {
         event.preventDefault();
     }
 
     handleUserInput = (event) => {
-        const { value } = event.target.value;
+        const { value } = event.target;
         this.setState({
-            value: event.target.value,
+            userInput: value,
         })
     }
     
         render() {
+        const { userInput, result } = this.state;
+        console.log({userInput})
             return ( 
-        
-        <form onSubmit={this.handleSubmit} className="video-container">
-            <input 
+        <form onSubmit={this.handleSubmit} className="searchBox">
+            <input
+            className="searchInput"
             type="text" 
             placeholder="Search..."
+            value={userInput}
             onChange={this.handleUserInput}
             />
-            <button type="submit">Search</button>
+            <button onClick={this.handleSearch} className="searchButton" type="submit">Search</button>
         </form>
     );
     }
