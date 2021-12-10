@@ -12,8 +12,7 @@ class SearchBar extends React.Component  {
 
     handleSearch = () => {
         fetch(
-            `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}`
-        )
+            `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${this.state.userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`)
         .then((response) => response.json())
         .then((json) => {
 
@@ -39,23 +38,25 @@ class SearchBar extends React.Component  {
     }
 
     handleUserInput = (event) => {
-        const { userInput } = event.target.value;
+        const { value } = event.target;
         this.setState({
-            userInput: event.target.value,
+            userInput: value,
         })
     }
     
         render() {
-        
+        const { userInput, result } = this.state;
+        console.log({userInput})
             return ( 
         <form onSubmit={this.handleSubmit} className="searchBox">
             <input
             className="searchInput"
             type="text" 
             placeholder="Search..."
+            value={userInput}
             onChange={this.handleUserInput}
             />
-            <button className="searchButton" type="submit">Search</button>
+            <button onClick={this.handleSearch} className="searchButton" type="submit">Search</button>
         </form>
     );
     }
