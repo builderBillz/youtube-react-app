@@ -47,6 +47,7 @@ class SearchBar extends React.Component  {
         render() {
         const { userInput, result } = this.state;
         console.log({userInput})
+        console.log(process.env.REACT_APP_API_KEY)
             return ( 
         <form onSubmit={this.handleSubmit} className="searchBox">
             <input
