@@ -12,7 +12,8 @@ class SearchBar extends React.Component  {
 
     handleSearch = () => {
         fetch(
-            `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${this.state.userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`)
+        `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${this.state.userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`
+            )
         .then((response) => response.json())
         .then((json) => {
 
@@ -47,6 +48,7 @@ class SearchBar extends React.Component  {
         render() {
         const { userInput, result } = this.state;
         console.log({userInput})
+        console.log(process.env.REACT_APP_API_KEY)
             return ( 
         <form onSubmit={this.handleSubmit} className="searchBox">
             <input
