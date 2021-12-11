@@ -17,10 +17,12 @@ class Home extends React.Component {
 
     render(){
         return (
+
             <section className="home">
                 <SearchBar />
                 <Video className="videoDisplay" />
                 <VideoThumbNail />
+
             </section>
         )
     }

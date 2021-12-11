@@ -2,9 +2,13 @@
   background-color: red;
   color: white;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: left;
 }
 h1{
-  font-size:20px;
+  font-size:40px;
   color: white;
 }
+*{
+  font-size: 30px;
+}
+
