@@ -1,0 +1,25 @@
+.Profile {
+    background-color: orange;
+    
+} 
+
+.Profile img {
+    object-fit: cover;
+    /* max-width: 360px; */
+    /* max-height: 360px; */
+    /* text-align: center; */
+    width: 360px;
+    height: 360px;
+}
+
+/* .cover-photo {
+    width: 360px;
+    height: 360px;
+    
+    background-color: lightgray;
+    
+    position: relative;
+    margin: 60px 0 0 0; 
+    
+    overflow: hidden;
+}  */
