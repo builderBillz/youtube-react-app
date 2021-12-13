@@ -42,7 +42,8 @@ class SearchBar extends React.Component  {
     
         render() {
         const { userInput, result } = this.state
-              console.log({result})      
+        const {handleDisplay} = this.props
+            console.log({handleDisplay})      
             return ( 
             <div>
                 <form onSubmit={this.handleSubmit} className="searchBox">
@@ -55,7 +56,7 @@ class SearchBar extends React.Component  {
                     />
                     <button onClick={this.handleSearch} className="searchButton" type="submit">Search</button>
                 </form>
-                <Video result={result} /> 
+                <Video  result={result} /> 
             </div>
     );
     }

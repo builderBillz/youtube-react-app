@@ -7,7 +7,7 @@ class Video extends React.Component {
     render() {
         const { result } = this.props;
         let VideoList = result.map((song, i) => {
-            return <VideoThumbNail song={song} key={song.id.videoId} />
+            return <VideoThumbNail  song={song} key={song.id.videoId} />
         })
         console.log({VideoList})
 
