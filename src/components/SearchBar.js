@@ -27,13 +27,6 @@ class SearchBar extends React.Component  {
             })
     }
 
-    componentDidMount = () => {
-        this.handleSearch();
-
-    };
-    
-    
-
     handleSubmit = (event) => {
         event.preventDefault();
     }
