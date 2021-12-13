@@ -1,6 +1,7 @@
 import React from "react";
 
 
+
 class VideoThumbNail extends React.Component {
     render() {
         const { song } = this.props
@@ -15,3 +16,4 @@ class VideoThumbNail extends React.Component {
 }
 
 export default VideoThumbNail;
+

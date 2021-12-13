@@ -6,12 +6,35 @@ import "./Home.css";
 
 
 class Home extends React.Component {
+    constructor(){
+        super()
+        this.state = ({
+            displayVideo: false,
+            videoId: "",
+        })
+    }
     
+    handleDisplay = (event) => {
+        this.setState({displayVideo: true})
+        this.setState({videoId: event.target.key})
+
+} 
+
+
+
     render(){
+        const { displayVideo, videoId } = this.state
+        if(displayVideo) {
+            return <div>
+                {videoId}
+            </div>
+        }
+
+
         return (
 
             <section className="home">
-                <SearchBar />
+                <SearchBar handleDisplay={this.handleDisplay} />
                 <p>No search results yet! Enter above</p>
 
             </section>
