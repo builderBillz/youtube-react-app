@@ -10,10 +10,11 @@
 
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 8px;
+    margin: 9px;
     display: grid;
     grid-area: 1 / 1 / span 2 / span 1;
     grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
   }
 
 .profile img {
@@ -28,4 +29,10 @@
 
 .name {
  text-align: center;
+}
+
+a {
+  display: block;
+  text-align: center;
+  font-size: 20px;
 }
