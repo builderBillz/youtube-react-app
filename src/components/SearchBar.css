@@ -1,12 +1,11 @@
 .searchBox {
-    top: 10%;
     padding: 50px;
-    
+    margin-left: 5px;
 }
 
 .searchInput {
     width: 500px;
-    height: 35px;
+    height: 45px;
     border-radius: 5px;
     line-height: 3px;
     font-size: 18px;
@@ -15,7 +14,7 @@
 
 .searchButton {
     width: 115px;
-    height: 39px;
+    height: 49px;
     font-size: 18px;
     line-height: 5px;
     border-radius: 5px;

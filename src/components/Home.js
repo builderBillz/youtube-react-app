@@ -6,22 +6,13 @@ import "./Home.css";
 
 
 class Home extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            value: "",
-        }
-    }
-
     
-
     render(){
         return (
 
             <section className="home">
                 <SearchBar />
-                <Video className="videoDisplay" />
-                <VideoThumbNail />
+                <p>No search results yet! Enter above</p>
 
             </section>
         )
