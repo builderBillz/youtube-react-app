@@ -1,5 +1,6 @@
 import React from "react";
 import "./SearchBar.css";
+import Video from "./Video";
 
 class SearchBar extends React.Component  {
     constructor() {
@@ -13,23 +14,18 @@ class SearchBar extends React.Component  {
     handleSearch = () => {
         fetch(
             `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${this.state.userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`)
-        .then((response) => response.json())
-        .then((json) => {
+        .then((response) => {
+            return response.json()})
+        .then((video) => {
 
-            console.log(json)
-            this.setState({
-                result: json,
-            })
+            console.log(video.items)
+            this.setState({ result: video.items })
         })
-            .catch((err) => {
-                console.log('error fetching data')
-            })
+        .catch((err) => {
+            console.log('error fetching data')
+        })
     }
 
-    componentDidMount = () => {
-        this.handleSearch();
-
-    };
     
     
 
@@ -45,20 +41,22 @@ class SearchBar extends React.Component  {
     }
     
         render() {
-        const { userInput, result } = this.state;
-        console.log({userInput})
-        console.log(process.env.REACT_APP_API_KEY)
+        const { userInput, result } = this.state
+              console.log({result})      
             return ( 
-        <form onSubmit={this.handleSubmit} className="searchBox">
-            <input
-            className="searchInput"
-            type="text" 
-            placeholder="Search..."
-            value={userInput}
-            onChange={this.handleUserInput}
-            />
-            <button onClick={this.handleSearch} className="searchButton" type="submit">Search</button>
-        </form>
+            <div>
+                <form onSubmit={this.handleSubmit} className="searchBox">
+                    <input
+                    className="searchInput"
+                    type="text" 
+                    placeholder="Search..."
+                    value={userInput}
+                    onChange={this.handleUserInput}
+                    />
+                    <button onClick={this.handleSearch} className="searchButton" type="submit">Search</button>
+                </form>
+                <Video result={result} /> 
+            </div>
     );
     }
 }
