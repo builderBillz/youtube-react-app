@@ -7,11 +7,11 @@ const Profile = (props) => {
             <div className='card'>
                 <div>
                     <p>
-                        <img src={image}/>
+                        <img src={image}alt='Headshot'/>
                     </p>
                     <h2 className='name'>{name}</h2>
-                    <p>{bio}</p>
-                    <a href={github}>GitHub</a>    
+                    <p className='bio'>{bio}</p>
+                    <a className='github' href={github}>GitHub</a>    
                 </div>
             </div>
         </div>
