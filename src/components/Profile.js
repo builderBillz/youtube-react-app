@@ -1,18 +1,19 @@
 import './Profile.css'
+import { Link } from "react-router-dom";
 
 const Profile = (props) => {
-    const { name, title, bio, image, github } = props.data;
+    const { name, bio, image, github } = props.data;
     return (
         <div className='profile'>
             <div className='column'>
                 <div className='card'>
                     <div className="container">
-                        <h2 className='name'>{name}</h2>
                         <p>
                             <img src={image}/>
                         </p>
+                        <h2 className='name'>{name}</h2>
                         <p>{bio}</p>
-                        <a className='github' href={github}>GitHub</a>    
+                        <a href={github}>GitHub</a>    
                     </div>
                 </div>
             </div>
