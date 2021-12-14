@@ -18,7 +18,7 @@ class SearchBar extends React.Component  {
             return response.json()})
         .then((video) => {
 
-            console.log(video.items)
+            // console.log(video.items)
             this.setState({ result: video.items })
         })
         .catch((err) => {
@@ -42,7 +42,9 @@ class SearchBar extends React.Component  {
     
         render() {
         const { userInput, result } = this.state
-              console.log({result})      
+        const {handleDisplay} = this.props
+        const {videosId} = this.props
+            // console.log({videosId})      
             return ( 
             <div>
                 <form onSubmit={this.handleSubmit} className="searchBox">
@@ -55,7 +57,7 @@ class SearchBar extends React.Component  {
                     />
                     <button onClick={this.handleSearch} className="searchButton" type="submit">Search</button>
                 </form>
-                <Video result={result} /> 
+                <Video  result={result} handleDisplay={handleDisplay} videosId={videosId}  /> 
             </div>
     );
     }
