@@ -3,6 +3,8 @@ import "./Video.css";
 import VideoThumbNail from "./VideoThumbNail";
 
 
+
+
 class Video extends React.Component {
     render() {
         const { result } = this.props;
