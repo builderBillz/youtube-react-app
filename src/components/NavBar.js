@@ -5,7 +5,7 @@ export const NavBar = () => {
   return (
    <>
    <div className='NavBar'>
-        <h1>Youtube</h1>
+        <h1> ▶ YouTube</h1>
           <ul>
           <Link style={{ textDecoration: 'none', color: 'white' }} to="/">Home</Link>
           </ul>
