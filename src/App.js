@@ -3,7 +3,7 @@ import './App.css';
 import Home from './components/Home';
 import NavBar from './components/NavBar';
 import About from "./components/About";
-import { Route, Router, Routes } from "react-router";
+import { Route, Routes } from "react-router";
 
 const App = () => {
   return (

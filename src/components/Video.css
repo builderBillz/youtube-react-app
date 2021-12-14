@@ -1,17 +1,18 @@
 .videoDisplay {
 
-    text-align: left;
-    width: 80%;
-    padding-left: 300px;
+    /* text-align: left; */
+    width: 84%;
+    padding-left: 140px;
     
 }
 
 .title {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 77px;
 }
 
 .videosList {
     display: grid;
-    grid-template-columns: 2fr;
+    grid-template-columns: 1fr;
 }

@@ -8,6 +8,7 @@ class SearchBar extends React.Component  {
         this.state = {
             userInput: "",
             result: [],
+            search:false,
         }
     }
 
@@ -18,8 +19,8 @@ class SearchBar extends React.Component  {
             return response.json()})
         .then((video) => {
 
-            // console.log(video.items)
             this.setState({ result: video.items })
+            this.setState({ search: true })
         })
         .catch((err) => {
             console.log('error fetching data')
@@ -31,6 +32,9 @@ class SearchBar extends React.Component  {
 
     handleSubmit = (event) => {
         event.preventDefault();
+        this.setState({
+            userInput: "",
+        })
     }
 
     handleUserInput = (event) => {
@@ -39,12 +43,29 @@ class SearchBar extends React.Component  {
             userInput: value,
         })
     }
-    
+
+
         render() {
-        const { userInput, result } = this.state
+        const { userInput, result, search } = this.state
         const {handleDisplay} = this.props
-        const {videosId} = this.props
-            // console.log({videosId})      
+      
+        if(search) {
+
+        return (
+            <div>
+                <form onSubmit={this.handleSubmit} className="searchBox">
+                    <input
+                    className="searchInput"
+                    type="text" 
+                    placeholder="Search..."
+                    value={userInput}
+                    onChange={this.handleUserInput}
+                    />
+                    <button onClick={this.handleSearch} className="searchButton" type="submit">Search</button>
+                </form>
+                <Video  result={result} handleDisplay={handleDisplay}  /> 
+            </div>)
+        }
             return ( 
             <div>
                 <form onSubmit={this.handleSubmit} className="searchBox">
@@ -57,7 +78,8 @@ class SearchBar extends React.Component  {
                     />
                     <button onClick={this.handleSearch} className="searchButton" type="submit">Search</button>
                 </form>
-                <Video  result={result} handleDisplay={handleDisplay} videosId={videosId}  /> 
+                <p>No search results yet! Enter above</p> 
+                <Video  result={result} handleDisplay={handleDisplay}  />
             </div>
     );
     }

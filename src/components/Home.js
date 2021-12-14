@@ -1,7 +1,5 @@
 import React from "react";
 import SearchBar from "./SearchBar";
-import Video from "./Video";
-import VideoThumbNail from "./VideoThumbNail";
 import "./Home.css";
 import YouTube from "react-youtube";
 
@@ -11,39 +9,71 @@ class Home extends React.Component {
         super()
         this.state = ({
             displayVideo: false,
-            videosId: "7",
+            videosId: "",
+            darkMode: false,
         })
     }
     
     handleDisplay = (event) => {
         this.setState({displayVideo: true})
-        // this.setState({videoId: {song.id.videoId}})
-        console.log(event.target.type)
+        this.setState({videosId:event.target.name})
+        console.log(event.target.name)
+    
 }
 
-    handleVideoId = () =>{
-        if (this.state.displayVideo){
-            // this.setState({videosId =  })
-        }
-    }
+handleDarkMode = (event) => {
+    const darkMode = this.state.darkMode
+    this.setState({darkMode:!darkMode})
+
+}
 
 
 
     render(){
-        const { displayVideo, videosId } = this.state
-        // console.log({videoId})
+        const { displayVideo, videosId, darkMode} = this.state
+       
+        const opts = {
+            height: '700',
+            width: '100%',
+            playerVars: {
+              autoplay: 1,
+            },
+          };
+
+          console.log(darkMode)
         if(displayVideo) {
-            return <div>
-                 <YouTube videoId={videosId}/>
+            if(darkMode){
+            return <div className="theater" 
+            style={{
+                position: "relative",
+                paddingBottom: "56.25%",
+                paddingTop: 25,
+                height: 0
+              }}>
+                 <YouTube videoId={videosId} opts={opts} />;
+                 <button className="switch" onClick={this.handleDarkMode}>Dark Mode Toggle</button>
+            </div>}
+            
+            else{
+                return <div className="default" 
+                style={{
+                position: "relative",
+                paddingBottom: "56.25%",
+                paddingTop: 25,
+                height: 0
+              }}>
+                 <YouTube videoId={videosId} opts={opts} />;
+                 <button className="switch" onClick={this.handleDarkMode}>Dark Mode Toggle</button>
             </div>
+            }
         }
+        
 
 
         return (
             
             <section className="home">
-                <SearchBar handleDisplay={this.handleDisplay} videosId={videosId} />
-                <p>No search results yet! Enter above</p>
+                <SearchBar handleVideoId={this.handleVideoId} handleDisplay={this.handleDisplay} videosId={videosId} />
 
             </section>
         )
