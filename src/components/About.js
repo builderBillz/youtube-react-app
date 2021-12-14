@@ -14,7 +14,7 @@ const About = () => {
             </div>
 
             {FellowData.map((fellow) => {return (<Profile data={fellow} key={fellow.id}/>)})}
-        </div>
+j        </div>
     );
     };
   
