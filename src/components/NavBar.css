@@ -1,12 +1,20 @@
-.NavBar{
+.NavBar {
   background-color: red;
   color: white;
   display: flex;
   justify-content: left;
 }
-h1{
+
+h1 {
   font-size:40px;
   color: white;
 }
 
+ul {
+  font-size: 30px;
+}
 
+ul:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
