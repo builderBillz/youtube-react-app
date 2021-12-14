@@ -1,15 +1,19 @@
-import { Component } from "react";
+import "./NavBar.css";
+import FellowData from "./FellowData";
+import Profile from './Profile';
+import './About.css'
 
+const About = () => {
+    return (
+        <div className='body'>
+            <div className='about'>
+              <h1 className='description'>About Us</h1>
+                <p>description</p>
+            </div>
 
-class About extends Component {
-    render () {
-        return (
-            <>
-                <p>IMAGE</p>
-                <p>Name</p>
-                {/* <a href="https://www.github.com/angie3j">Angie Guerrero</a> */}
-            </>
-        );
+            {FellowData.map((fellow) => {return (<Profile data= {fellow}/>)})}
+        </div>
+    )
     }
-}
-export default About;  
+  
+  export default About;

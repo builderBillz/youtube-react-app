@@ -1,0 +1,15 @@
+.description {
+  text-align: center;
+  color: black; 
+  font-size: 65px;
+}
+  
+p {
+text-align: center;
+font-size: 20px;
+}
+
+
+.about .description {
+  text-align: center;
+}

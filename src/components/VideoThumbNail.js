@@ -4,6 +4,7 @@ import YouTube from "react-youtube";
 
 
 
+
 class VideoThumbNail extends React.Component {
     render() {
         const { song } = this.props
@@ -19,3 +20,4 @@ class VideoThumbNail extends React.Component {
 }
 
 export default VideoThumbNail;
+
