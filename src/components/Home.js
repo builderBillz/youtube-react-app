@@ -3,6 +3,7 @@ import SearchBar from "./SearchBar";
 import Video from "./Video";
 import VideoThumbNail from "./VideoThumbNail";
 import "./Home.css";
+import YouTube from "react-youtube";
 
 
 class Home extends React.Component {
@@ -10,31 +11,38 @@ class Home extends React.Component {
         super()
         this.state = ({
             displayVideo: false,
-            videoId: "",
+            videosId: "7",
         })
     }
     
     handleDisplay = (event) => {
         this.setState({displayVideo: true})
-        this.setState({videoId: event.target.key})
+        // this.setState({videoId: {song.id.videoId}})
+        console.log(event.target.type)
+}
 
-} 
+    handleVideoId = () =>{
+        if (this.state.displayVideo){
+            // this.setState({videosId =  })
+        }
+    }
 
 
 
     render(){
-        const { displayVideo, videoId } = this.state
+        const { displayVideo, videosId } = this.state
+        // console.log({videoId})
         if(displayVideo) {
             return <div>
-                {videoId}
+                 <YouTube videoId={videosId}/>
             </div>
         }
 
 
         return (
-
+            
             <section className="home">
-                <SearchBar handleDisplay={this.handleDisplay} />
+                <SearchBar handleDisplay={this.handleDisplay} videosId={videosId} />
                 <p>No search results yet! Enter above</p>
 
             </section>
