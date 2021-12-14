@@ -1,5 +1,6 @@
 .videoDisplay {
     display: grid;
-    grid-template-columns: 3fr;
+    grid-template-columns: 1fr;
     font-size: 5px;
+    padding: 200px;
 }
