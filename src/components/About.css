@@ -4,10 +4,12 @@
   font-size: 65px;
 }
   
-p {
+.paragraph {
 text-align: center;
 font-size: 30px;
 color: #4E4B4A; 
+padding-left: 2em;
+padding-right: 2em;  
 }
 
 .our-team {
@@ -15,9 +17,11 @@ color: #4E4B4A;
   font-size: 70px;
   font-weight: 800px;
   color: #4E4B4A; 
+  /* color: red;  */
+  padding-bottom: 2px; 
 }
 
-.about .description {
-  text-align: center;
+.red-text {
+  color: red;
 }
 
