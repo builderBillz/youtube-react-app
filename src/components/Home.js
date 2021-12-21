@@ -21,7 +21,7 @@ class Home extends React.Component {
     
 }
 
-handleDarkMode = (event) => {
+handleDarkMode = () => {
     const darkMode = this.state.darkMode
     this.setState({darkMode:!darkMode})
 
@@ -82,4 +82,3 @@ handleDarkMode = (event) => {
 
 export default Home; 
 
-// AIzaSyCUGo0lHGnp0HZtbMZ2kUynD6ytG-I2HSQ

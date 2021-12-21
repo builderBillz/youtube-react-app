@@ -22,7 +22,7 @@ class SearchBar extends React.Component  {
             this.setState({ result: video.items })
             this.setState({ search: true })
         })
-        .catch((err) => {
+        .catch(() => {
             console.log('error fetching data')
         })
     }
